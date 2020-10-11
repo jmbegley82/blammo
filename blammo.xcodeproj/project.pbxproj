@@ -11,6 +11,8 @@
 		1A4BD01F25339774009372FE /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01C25339774009372FE /* Logger.cpp */; };
 		1A4BD02025339774009372FE /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4BD01D25339774009372FE /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A4BD03325339847009372FE /* agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4BD03225339847009372FE /* agnostic.framework */; };
+		1A4BD06725339E75009372FE /* log-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD06625339E75009372FE /* log-test.cpp */; };
+		1A4BD06825339E8E009372FE /* blammo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* blammo.framework */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,12 @@
 		1A4BD01C25339774009372FE /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = src/Logger.cpp; sourceTree = "<group>"; };
 		1A4BD01D25339774009372FE /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = src/Logger.h; sourceTree = "<group>"; };
 		1A4BD03225339847009372FE /* agnostic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = agnostic.framework; path = /Library/Frameworks/agnostic.framework; sourceTree = "<absolute>"; };
+		1A4BD06025339E42009372FE /* log-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "log-test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A4BD06625339E75009372FE /* log-test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "log-test.cpp"; path = "src/log-test.cpp"; sourceTree = "<group>"; };
+		1A4BD09F2533A25C009372FE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1A4BD0A52533A284009372FE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1A4BD0A72533A284009372FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1A4BD0A92533A284009372FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		32DBCF5E0370ADEE00C91783 /* blammo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blammo_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* blammo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = blammo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +39,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1A4BD05E25339E42009372FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A4BD06825339E8E009372FE /* blammo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* blammo.framework */,
+				1A4BD06025339E42009372FE /* log-test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +71,7 @@
 		0867D691FE84028FC02AAC07 /* blammo */ = {
 			isa = PBXGroup;
 			children = (
+				1A4BD06625339E75009372FE /* log-test.cpp */,
 				1A4BD01B25339774009372FE /* Logger.c */,
 				1A4BD01C25339774009372FE /* Logger.cpp */,
 				1A4BD01D25339774009372FE /* Logger.h */,
@@ -62,6 +80,10 @@
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				1A4BD09F2533A25C009372FE /* Cocoa.framework */,
+				1A4BD0A52533A284009372FE /* AppKit.framework */,
+				1A4BD0A72533A284009372FE /* CoreData.framework */,
+				1A4BD0A92533A284009372FE /* Foundation.framework */,
 			);
 			name = blammo;
 			sourceTree = "<group>";
@@ -132,6 +154,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1A4BD05F25339E42009372FE /* log-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A4BD06525339E63009372FE /* Build configuration list for PBXNativeTarget "log-test" */;
+			buildPhases = (
+				1A4BD05D25339E42009372FE /* Sources */,
+				1A4BD05E25339E42009372FE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "log-test";
+			productName = "log-test";
+			productReference = 1A4BD06025339E42009372FE /* log-test */;
+			productType = "com.apple.product-type.tool";
+		};
 		8DC2EF4F0486A6940098B216 /* blammo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "blammo" */;
@@ -165,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* blammo */,
+				1A4BD05F25339E42009372FE /* log-test */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +220,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1A4BD05D25339E42009372FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A4BD06725339E75009372FE /* log-test.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +251,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1A4BD06225339E42009372FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				PRODUCT_NAME = "log-test";
+			};
+			name = Debug;
+		};
+		1A4BD06325339E42009372FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				PRODUCT_NAME = "log-test";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -272,6 +357,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1A4BD06525339E63009372FE /* Build configuration list for PBXNativeTarget "log-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A4BD06225339E42009372FE /* Debug */,
+				1A4BD06325339E42009372FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "blammo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
