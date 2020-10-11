@@ -10,9 +10,9 @@
 		1A9659B92532800C004A5D69 /* Logger.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9659B62532800C004A5D69 /* Logger.c */; };
 		1A9659BA2532800C004A5D69 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A9659B72532800C004A5D69 /* Logger.cpp */; };
 		1A9659BB2532800C004A5D69 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9659B82532800C004A5D69 /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A965A0025328CB4004A5D69 /* agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9659FF25328CB4004A5D69 /* agnostic.framework */; };
 		1A965A2C25328D50004A5D69 /* log-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A965A2B25328D50004A5D69 /* log-test.cpp */; };
 		1A965A3C253290B4004A5D69 /* blammo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* blammo.framework */; };
+		1A965CB82532A1B0004A5D69 /* agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9659FF25328CB4004A5D69 /* agnostic.framework */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -28,7 +28,6 @@
 		1A9659F625328BEE004A5D69 /* log-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "log-test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9659FF25328CB4004A5D69 /* agnostic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = agnostic.framework; path = /Users/james/Library/Frameworks/agnostic.framework; sourceTree = "<absolute>"; };
 		1A965A2B25328D50004A5D69 /* log-test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "log-test.cpp"; sourceTree = "<group>"; };
-		32DBCF5E0370ADEE00C91783 /* blammo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blammo_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* blammo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = blammo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -48,7 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
-				1A965A0025328CB4004A5D69 /* agnostic.framework in Frameworks */,
+				1A965CB82532A1B0004A5D69 /* agnostic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +134,6 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32DBCF5E0370ADEE00C91783 /* blammo_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -290,15 +288,15 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/james/Library/Frameworks,
+					"$(HOME)/Library/Frameworks",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = blammo_Prefix.pch;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				PRODUCT_NAME = blammo;
@@ -315,12 +313,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/james/Library/Frameworks,
+					"$(HOME)/Library/Frameworks",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = blammo_Prefix.pch;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				PRODUCT_NAME = blammo;
@@ -333,11 +331,13 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = macosx10.6;
 			};
 			name = Debug;
@@ -347,9 +347,11 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = macosx10.6;
 			};
 			name = Release;
