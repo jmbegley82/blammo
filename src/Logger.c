@@ -9,7 +9,7 @@
 #include <string.h>
 #include <assert.h>
 #include "Logger.h"
-#include <Timing.h>
+#include <agnostic/Timing.h>
 
 #if !defined DEFAULT_MAXLINELENGTH
 //! The default maximum length of a logbuffer entry

@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A9659B92532800C004A5D69 /* Logger.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9659B62532800C004A5D69 /* Logger.c */; };
-		1A9659BA2532800C004A5D69 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A9659B72532800C004A5D69 /* Logger.cpp */; };
-		1A9659BB2532800C004A5D69 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9659B82532800C004A5D69 /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A965A2C25328D50004A5D69 /* log-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A965A2B25328D50004A5D69 /* log-test.cpp */; };
-		1A965A3C253290B4004A5D69 /* blammo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* blammo.framework */; };
-		1A965CB82532A1B0004A5D69 /* agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9659FF25328CB4004A5D69 /* agnostic.framework */; };
+		1A4BD01E25339774009372FE /* Logger.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01B25339774009372FE /* Logger.c */; };
+		1A4BD01F25339774009372FE /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01C25339774009372FE /* Logger.cpp */; };
+		1A4BD02025339774009372FE /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4BD01D25339774009372FE /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A4BD03325339847009372FE /* agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4BD03225339847009372FE /* agnostic.framework */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -22,32 +20,23 @@
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		1A9659B62532800C004A5D69 /* Logger.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Logger.c; sourceTree = "<group>"; };
-		1A9659B72532800C004A5D69 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
-		1A9659B82532800C004A5D69 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
-		1A9659F625328BEE004A5D69 /* log-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "log-test"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A9659FF25328CB4004A5D69 /* agnostic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = agnostic.framework; path = /Users/james/Library/Frameworks/agnostic.framework; sourceTree = "<absolute>"; };
-		1A965A2B25328D50004A5D69 /* log-test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "log-test.cpp"; sourceTree = "<group>"; };
+		1A4BD01B25339774009372FE /* Logger.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Logger.c; path = src/Logger.c; sourceTree = "<group>"; };
+		1A4BD01C25339774009372FE /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = src/Logger.cpp; sourceTree = "<group>"; };
+		1A4BD01D25339774009372FE /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = src/Logger.h; sourceTree = "<group>"; };
+		1A4BD03225339847009372FE /* agnostic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = agnostic.framework; path = /Library/Frameworks/agnostic.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* blammo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blammo_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* blammo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = blammo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1A9659F425328BEE004A5D69 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A965A3C253290B4004A5D69 /* blammo.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
-				1A965CB82532A1B0004A5D69 /* agnostic.framework in Frameworks */,
+				1A4BD03325339847009372FE /* agnostic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* blammo.framework */,
-				1A9659F625328BEE004A5D69 /* log-test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,7 +54,9 @@
 		0867D691FE84028FC02AAC07 /* blammo */ = {
 			isa = PBXGroup;
 			children = (
-				1A9659B52532800C004A5D69 /* src */,
+				1A4BD01B25339774009372FE /* Logger.c */,
+				1A4BD01C25339774009372FE /* Logger.cpp */,
+				1A4BD01D25339774009372FE /* Logger.h */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -104,8 +94,8 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1A9659FF25328CB4004A5D69 /* agnostic.framework */,
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				1A4BD03225339847009372FE /* agnostic.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -120,20 +110,10 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		1A9659B52532800C004A5D69 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				1A9659B62532800C004A5D69 /* Logger.c */,
-				1A9659B72532800C004A5D69 /* Logger.cpp */,
-				1A9659B82532800C004A5D69 /* Logger.h */,
-				1A965A2B25328D50004A5D69 /* log-test.cpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				32DBCF5E0370ADEE00C91783 /* blammo_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -145,29 +125,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A9659BB2532800C004A5D69 /* Logger.h in Headers */,
+				1A4BD02025339774009372FE /* Logger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1A9659F525328BEE004A5D69 /* log-test */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1A9659FA25328C0D004A5D69 /* Build configuration list for PBXNativeTarget "log-test" */;
-			buildPhases = (
-				1A9659F325328BEE004A5D69 /* Sources */,
-				1A9659F425328BEE004A5D69 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "log-test";
-			productName = "log-test";
-			productReference = 1A9659F625328BEE004A5D69 /* log-test */;
-			productType = "com.apple.product-type.tool";
-		};
 		8DC2EF4F0486A6940098B216 /* blammo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "blammo" */;
@@ -201,7 +165,6 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* blammo */,
-				1A9659F525328BEE004A5D69 /* log-test */,
 			);
 		};
 /* End PBXProject section */
@@ -218,20 +181,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A9659F325328BEE004A5D69 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A965A2C25328D50004A5D69 /* log-test.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A9659B92532800C004A5D69 /* Logger.c in Sources */,
-				1A9659BA2532800C004A5D69 /* Logger.cpp in Sources */,
+				1A4BD01E25339774009372FE /* Logger.c in Sources */,
+				1A4BD01F25339774009372FE /* Logger.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,36 +204,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1A9659F825328BEF004A5D69 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
-				PRODUCT_NAME = "log-test";
-			};
-			name = Debug;
-		};
-		1A9659F925328BEF004A5D69 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
-				PRODUCT_NAME = "log-test";
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -286,19 +211,15 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(HOME)/Library/Frameworks",
-				);
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = blammo_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = /Library/Frameworks;
 				PRODUCT_NAME = blammo;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -311,16 +232,12 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(HOME)/Library/Frameworks",
-				);
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = blammo_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = /Library/Frameworks;
 				PRODUCT_NAME = blammo;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -331,13 +248,11 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_SYMBOL_SEPARATION = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = macosx10.6;
 			};
 			name = Debug;
@@ -347,11 +262,9 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_SYMBOL_SEPARATION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				SDKROOT = macosx10.6;
 			};
 			name = Release;
@@ -359,15 +272,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A9659FA25328C0D004A5D69 /* Build configuration list for PBXNativeTarget "log-test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1A9659F825328BEF004A5D69 /* Debug */,
-				1A9659F925328BEF004A5D69 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "blammo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
