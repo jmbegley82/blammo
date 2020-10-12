@@ -12,11 +12,11 @@
 #include "Logger.h"
 
 int main(int argc, char** argv) {
-	Logger_init();
+	//Logger_init();
 	string msg = "log-test:  ";
 	Log(msg + "Log test passed!");
 	Log(msg + "This line should be made waaaaaay longer to make sure word wrap actually works.");
 	Log_now(msg + "Fluuuuuush.");
-	Logger_finish();
+	//Logger_finish();
 	return 0;
 }
