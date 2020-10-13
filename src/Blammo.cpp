@@ -3,7 +3,7 @@
  */
 
 #include <string>
-#include "Logger.h"
+#include "Blammo.h"
 
 using std::string;
 

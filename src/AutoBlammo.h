@@ -2,7 +2,7 @@
  *
  */
 
-#include "Logger.h"
+#include "Blammo.h"
 
 /**
  * A statically-allocated class that automatically initializes and deinitializes Logger

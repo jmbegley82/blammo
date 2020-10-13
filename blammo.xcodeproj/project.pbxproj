@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A4BD01E25339774009372FE /* Logger.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01B25339774009372FE /* Logger.c */; };
-		1A4BD01F25339774009372FE /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01C25339774009372FE /* Logger.cpp */; };
-		1A4BD02025339774009372FE /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4BD01D25339774009372FE /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A4BD01E25339774009372FE /* Blammo.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01B25339774009372FE /* Blammo.c */; };
+		1A4BD01F25339774009372FE /* Blammo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01C25339774009372FE /* Blammo.cpp */; };
+		1A4BD02025339774009372FE /* Blammo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4BD01D25339774009372FE /* Blammo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A4BD03325339847009372FE /* agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4BD03225339847009372FE /* agnostic.framework */; };
-		1A4BD06725339E75009372FE /* log-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD06625339E75009372FE /* log-test.cpp */; };
-		1A4BD06825339E8E009372FE /* blammo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* blammo.framework */; };
-		1A6C3A44253424F10065C0D2 /* StaticLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C3A42253424F10065C0D2 /* StaticLogger.cpp */; };
-		1A6C3A45253424F10065C0D2 /* StaticLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6C3A43253424F10065C0D2 /* StaticLogger.h */; };
+		1A4BD06725339E75009372FE /* Blammo-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD06625339E75009372FE /* Blammo-test.cpp */; };
+		1A6C3A44253424F10065C0D2 /* AutoBlammo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C3A42253424F10065C0D2 /* AutoBlammo.cpp */; };
+		1A6C3A45253424F10065C0D2 /* AutoBlammo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6C3A43253424F10065C0D2 /* AutoBlammo.h */; };
+		1AB57321253559FB00331FE1 /* Blammo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* Blammo.framework */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -24,21 +24,21 @@
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		1A4BD01B25339774009372FE /* Logger.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Logger.c; path = src/Logger.c; sourceTree = "<group>"; };
-		1A4BD01C25339774009372FE /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = src/Logger.cpp; sourceTree = "<group>"; };
-		1A4BD01D25339774009372FE /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = src/Logger.h; sourceTree = "<group>"; };
+		1A4BD01B25339774009372FE /* Blammo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Blammo.c; path = src/Blammo.c; sourceTree = "<group>"; };
+		1A4BD01C25339774009372FE /* Blammo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Blammo.cpp; path = src/Blammo.cpp; sourceTree = "<group>"; };
+		1A4BD01D25339774009372FE /* Blammo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Blammo.h; path = src/Blammo.h; sourceTree = "<group>"; };
 		1A4BD03225339847009372FE /* agnostic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = agnostic.framework; path = /Library/Frameworks/agnostic.framework; sourceTree = "<absolute>"; };
-		1A4BD06025339E42009372FE /* log-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "log-test"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A4BD06625339E75009372FE /* log-test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "log-test.cpp"; path = "src/log-test.cpp"; sourceTree = "<group>"; };
+		1A4BD06025339E42009372FE /* Blammo-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Blammo-test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A4BD06625339E75009372FE /* Blammo-test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "Blammo-test.cpp"; path = "src/Blammo-test.cpp"; sourceTree = "<group>"; };
 		1A4BD09F2533A25C009372FE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1A4BD0A52533A284009372FE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1A4BD0A72533A284009372FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1A4BD0A92533A284009372FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1A6C3A42253424F10065C0D2 /* StaticLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StaticLogger.cpp; path = src/StaticLogger.cpp; sourceTree = "<group>"; };
-		1A6C3A43253424F10065C0D2 /* StaticLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StaticLogger.h; path = src/StaticLogger.h; sourceTree = "<group>"; };
-		32DBCF5E0370ADEE00C91783 /* blammo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blammo_Prefix.pch; sourceTree = "<group>"; };
+		1A6C3A42253424F10065C0D2 /* AutoBlammo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AutoBlammo.cpp; path = src/AutoBlammo.cpp; sourceTree = "<group>"; };
+		1A6C3A43253424F10065C0D2 /* AutoBlammo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoBlammo.h; path = src/AutoBlammo.h; sourceTree = "<group>"; };
+		32DBCF5E0370ADEE00C91783 /* Blammo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blammo_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DC2EF5B0486A6940098B216 /* blammo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = blammo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC2EF5B0486A6940098B216 /* Blammo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Blammo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A4BD06825339E8E009372FE /* blammo.framework in Frameworks */,
+				1AB57321253559FB00331FE1 /* Blammo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,21 +66,21 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5B0486A6940098B216 /* blammo.framework */,
-				1A4BD06025339E42009372FE /* log-test */,
+				8DC2EF5B0486A6940098B216 /* Blammo.framework */,
+				1A4BD06025339E42009372FE /* Blammo-test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 /* blammo */ = {
+		0867D691FE84028FC02AAC07 /* Blammo */ = {
 			isa = PBXGroup;
 			children = (
-				1A6C3A42253424F10065C0D2 /* StaticLogger.cpp */,
-				1A6C3A43253424F10065C0D2 /* StaticLogger.h */,
-				1A4BD06625339E75009372FE /* log-test.cpp */,
-				1A4BD01B25339774009372FE /* Logger.c */,
-				1A4BD01C25339774009372FE /* Logger.cpp */,
-				1A4BD01D25339774009372FE /* Logger.h */,
+				1A6C3A42253424F10065C0D2 /* AutoBlammo.cpp */,
+				1A6C3A43253424F10065C0D2 /* AutoBlammo.h */,
+				1A4BD06625339E75009372FE /* Blammo-test.cpp */,
+				1A4BD01B25339774009372FE /* Blammo.c */,
+				1A4BD01C25339774009372FE /* Blammo.cpp */,
+				1A4BD01D25339774009372FE /* Blammo.h */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -91,7 +91,7 @@
 				1A4BD0A72533A284009372FE /* CoreData.framework */,
 				1A4BD0A92533A284009372FE /* Foundation.framework */,
 			);
-			name = blammo;
+			name = Blammo;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
@@ -141,7 +141,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32DBCF5E0370ADEE00C91783 /* blammo_Prefix.pch */,
+				32DBCF5E0370ADEE00C91783 /* Blammo_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -153,17 +153,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A4BD02025339774009372FE /* Logger.h in Headers */,
-				1A6C3A45253424F10065C0D2 /* StaticLogger.h in Headers */,
+				1A4BD02025339774009372FE /* Blammo.h in Headers */,
+				1A6C3A45253424F10065C0D2 /* AutoBlammo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1A4BD05F25339E42009372FE /* log-test */ = {
+		1A4BD05F25339E42009372FE /* Blammo-test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A4BD06525339E63009372FE /* Build configuration list for PBXNativeTarget "log-test" */;
+			buildConfigurationList = 1A4BD06525339E63009372FE /* Build configuration list for PBXNativeTarget "Blammo-test" */;
 			buildPhases = (
 				1A4BD05D25339E42009372FE /* Sources */,
 				1A4BD05E25339E42009372FE /* Frameworks */,
@@ -172,14 +172,14 @@
 			);
 			dependencies = (
 			);
-			name = "log-test";
+			name = "Blammo-test";
 			productName = "log-test";
-			productReference = 1A4BD06025339E42009372FE /* log-test */;
+			productReference = 1A4BD06025339E42009372FE /* Blammo-test */;
 			productType = "com.apple.product-type.tool";
 		};
-		8DC2EF4F0486A6940098B216 /* blammo */ = {
+		8DC2EF4F0486A6940098B216 /* Blammo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "blammo" */;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Blammo" */;
 			buildPhases = (
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
@@ -190,10 +190,10 @@
 			);
 			dependencies = (
 			);
-			name = blammo;
+			name = Blammo;
 			productInstallPath = "$(HOME)/Library/Frameworks";
-			productName = blammo;
-			productReference = 8DC2EF5B0486A6940098B216 /* blammo.framework */;
+			productName = Blammo;
+			productReference = 8DC2EF5B0486A6940098B216 /* Blammo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -204,13 +204,13 @@
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "blammo" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
-			mainGroup = 0867D691FE84028FC02AAC07 /* blammo */;
+			mainGroup = 0867D691FE84028FC02AAC07 /* Blammo */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DC2EF4F0486A6940098B216 /* blammo */,
-				1A4BD05F25339E42009372FE /* log-test */,
+				8DC2EF4F0486A6940098B216 /* Blammo */,
+				1A4BD05F25339E42009372FE /* Blammo-test */,
 			);
 		};
 /* End PBXProject section */
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A4BD06725339E75009372FE /* log-test.cpp in Sources */,
+				1A4BD06725339E75009372FE /* Blammo-test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,9 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A4BD01E25339774009372FE /* Logger.c in Sources */,
-				1A4BD01F25339774009372FE /* Logger.cpp in Sources */,
-				1A6C3A44253424F10065C0D2 /* StaticLogger.cpp in Sources */,
+				1A4BD01E25339774009372FE /* Blammo.c in Sources */,
+				1A4BD01F25339774009372FE /* Blammo.cpp in Sources */,
+				1A6C3A44253424F10065C0D2 /* AutoBlammo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +274,7 @@
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				PRODUCT_NAME = "log-test";
+				PRODUCT_NAME = "Blammo-test";
 			};
 			name = Debug;
 		};
@@ -292,7 +292,7 @@
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				PRODUCT_NAME = "log-test";
+				PRODUCT_NAME = "Blammo-test";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -310,10 +310,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = blammo_Prefix.pch;
+				GCC_PREFIX_HEADER = Blammo_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Frameworks;
-				PRODUCT_NAME = blammo;
+				PRODUCT_NAME = Blammo;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -328,10 +328,10 @@
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = blammo_Prefix.pch;
+				GCC_PREFIX_HEADER = Blammo_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Frameworks;
-				PRODUCT_NAME = blammo;
+				PRODUCT_NAME = Blammo;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -365,7 +365,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A4BD06525339E63009372FE /* Build configuration list for PBXNativeTarget "log-test" */ = {
+		1A4BD06525339E63009372FE /* Build configuration list for PBXNativeTarget "Blammo-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A4BD06225339E42009372FE /* Debug */,
@@ -374,7 +374,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "blammo" */ = {
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Blammo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91AE08733DA50010E9CD /* Debug */,

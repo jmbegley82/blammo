@@ -2,8 +2,8 @@
  *
  */
 
-#include "StaticLogger.h"
-#include "Logger.h"
+#include "AutoBlammo.h"
+#include "Blammo.h"
 
 static StaticLogger _staticlogger;
 

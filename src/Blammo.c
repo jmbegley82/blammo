@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-#include "Logger.h"
+#include "Blammo.h"
 #include <agnostic/Timing.h>
 
 #if !defined DEFAULT_MAXLINELENGTH
