@@ -9,7 +9,7 @@
 #include <string.h>
 #include <assert.h>
 #include "Blammo.h"
-#include <agnostic/Timing.h>
+#include <Agnostic/Timing.h>
 
 #if !defined DEFAULT_MAXLINELENGTH
 //! The default maximum length of a logbuffer entry

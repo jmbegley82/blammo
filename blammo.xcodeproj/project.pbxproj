@@ -10,14 +10,14 @@
 		1A4BD01E25339774009372FE /* Blammo.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01B25339774009372FE /* Blammo.c */; };
 		1A4BD01F25339774009372FE /* Blammo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01C25339774009372FE /* Blammo.cpp */; };
 		1A4BD02025339774009372FE /* Blammo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4BD01D25339774009372FE /* Blammo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A4BD03325339847009372FE /* agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4BD03225339847009372FE /* agnostic.framework */; };
+		1A4BD03325339847009372FE /* Agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4BD03225339847009372FE /* Agnostic.framework */; };
 		1A4BD06725339E75009372FE /* Blammo-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD06625339E75009372FE /* Blammo-test.cpp */; };
 		1A6C3A44253424F10065C0D2 /* AutoBlammo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C3A42253424F10065C0D2 /* AutoBlammo.cpp */; };
 		1A6C3A45253424F10065C0D2 /* AutoBlammo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6C3A43253424F10065C0D2 /* AutoBlammo.h */; };
 		1AB5733D25355C7700331FE1 /* AutoBlammo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C3A42253424F10065C0D2 /* AutoBlammo.cpp */; };
 		1AB5733E25355C7C00331FE1 /* Blammo.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01B25339774009372FE /* Blammo.c */; };
 		1AB5733F25355C7D00331FE1 /* Blammo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01C25339774009372FE /* Blammo.cpp */; };
-		1AB5734225355CDC00331FE1 /* agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4BD03225339847009372FE /* agnostic.framework */; };
+		1AB5734225355CDC00331FE1 /* Agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4BD03225339847009372FE /* Agnostic.framework */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -30,7 +30,7 @@
 		1A4BD01B25339774009372FE /* Blammo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Blammo.c; path = src/Blammo.c; sourceTree = "<group>"; };
 		1A4BD01C25339774009372FE /* Blammo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Blammo.cpp; path = src/Blammo.cpp; sourceTree = "<group>"; };
 		1A4BD01D25339774009372FE /* Blammo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Blammo.h; path = src/Blammo.h; sourceTree = "<group>"; };
-		1A4BD03225339847009372FE /* agnostic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = agnostic.framework; path = /Library/Frameworks/agnostic.framework; sourceTree = "<absolute>"; };
+		1A4BD03225339847009372FE /* Agnostic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Agnostic.framework; path = /Library/Frameworks/Agnostic.framework; sourceTree = "<absolute>"; };
 		1A4BD06025339E42009372FE /* Blammo-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Blammo-test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4BD06625339E75009372FE /* Blammo-test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "Blammo-test.cpp"; path = "src/Blammo-test.cpp"; sourceTree = "<group>"; };
 		1A4BD09F2533A25C009372FE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AB5734225355CDC00331FE1 /* agnostic.framework in Frameworks */,
+				1AB5734225355CDC00331FE1 /* Agnostic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
-				1A4BD03325339847009372FE /* agnostic.framework in Frameworks */,
+				1A4BD03325339847009372FE /* Agnostic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
-				1A4BD03225339847009372FE /* agnostic.framework */,
+				1A4BD03225339847009372FE /* Agnostic.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
