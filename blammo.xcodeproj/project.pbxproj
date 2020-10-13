@@ -14,7 +14,10 @@
 		1A4BD06725339E75009372FE /* Blammo-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD06625339E75009372FE /* Blammo-test.cpp */; };
 		1A6C3A44253424F10065C0D2 /* AutoBlammo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C3A42253424F10065C0D2 /* AutoBlammo.cpp */; };
 		1A6C3A45253424F10065C0D2 /* AutoBlammo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6C3A43253424F10065C0D2 /* AutoBlammo.h */; };
-		1AB57321253559FB00331FE1 /* Blammo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* Blammo.framework */; };
+		1AB5733D25355C7700331FE1 /* AutoBlammo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C3A42253424F10065C0D2 /* AutoBlammo.cpp */; };
+		1AB5733E25355C7C00331FE1 /* Blammo.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01B25339774009372FE /* Blammo.c */; };
+		1AB5733F25355C7D00331FE1 /* Blammo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BD01C25339774009372FE /* Blammo.cpp */; };
+		1AB5734225355CDC00331FE1 /* agnostic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4BD03225339847009372FE /* agnostic.framework */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AB57321253559FB00331FE1 /* Blammo.framework in Frameworks */,
+				1AB5734225355CDC00331FE1 /* agnostic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A4BD06725339E75009372FE /* Blammo-test.cpp in Sources */,
+				1AB5733D25355C7700331FE1 /* AutoBlammo.cpp in Sources */,
+				1AB5733E25355C7C00331FE1 /* Blammo.c in Sources */,
+				1AB5733F25355C7D00331FE1 /* Blammo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
