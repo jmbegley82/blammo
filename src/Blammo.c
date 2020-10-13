@@ -1,4 +1,4 @@
-/* Logger.c
+/* Blammo.c
  *
  */
 
@@ -32,18 +32,18 @@ int _logMaxLineLength;
 int _logMaxLines;
 int _logCurrentLine;		//!< This index represents the next entry in _logbuffer that will be written
 int _logAutoflushSleep;
-int _logStatus = LOG_UNINIT;	//!< This is used to pause/resume/exit the Logger_autoflush thread
-pthread_t _logFlushThread;	//!< This pthread_t holds the Logger_autoflush thread
+int _logStatus = BLAMMO_UNINIT;	//!< This is used to pause/resume/exit the Blammo_autoflush thread
+pthread_t _logFlushThread;	//!< This pthread_t holds the Blammo_autoflush thread
 
 /**
- * @brief Simple thread that calls Logger_process and then waits a specified amount of time
- * @details If _logStatus is LOG_STOPPED, nothing will be printed.  If _logStatus is LOG_RUNNING,
- * lines will be printed.  If _logStatus is LOG_EXITING, nothing will be printed and this thread will exit.
+ * @brief Simple thread that calls Blammo_process and then waits a specified amount of time
+ * @details If _logStatus is BLAMMO_STOPPED, nothing will be printed.  If _logStatus is BLAMMO_RUNNING,
+ * lines will be printed.  If _logStatus is BLAMMO_EXITING, nothing will be printed and this thread will exit.
  */
-void* Logger_autoflush(void* arg) {
-/*	while(_logStatus != LOG_EXITING) {
-		if(_logStatus == LOG_RUNNING) {
-			Logger_process();
+void* Blammo_autoflush(void* arg) {
+/*	while(_logStatus != BLAMMO_EXITING) {
+		if(_logStatus == BLAMMO_RUNNING) {
+			Blammo_process();
 		}
 		SleepMsec(_logAutoflushSleep);
 	}
@@ -52,9 +52,9 @@ void* Logger_autoflush(void* arg) {
 	int cachedStatus = _logStatus;
 	int cachedSleep = _logAutoflushSleep;
 	pthread_mutex_unlock(&_logMutex);
-	while(cachedStatus != LOG_EXITING) {
-		if(cachedStatus == LOG_RUNNING) {
-			Logger_process();
+	while(cachedStatus != BLAMMO_EXITING) {
+		if(cachedStatus == BLAMMO_RUNNING) {
+			Blammo_process();
 		}
 		SleepMsec(cachedSleep);
 		pthread_mutex_lock(&_logMutex);
@@ -63,12 +63,12 @@ void* Logger_autoflush(void* arg) {
 		pthread_mutex_unlock(&_logMutex);
 	}
 #if defined DEBUGEXTRA
-	Logger("Logger_autoflush has begun to exit correctly.");
+	Logger("Blammo_autoflush has begun to exit correctly.");
 #endif //DEBUGEXTRA
 	pthread_exit((void*)0);
 }
 
-void Logger_createbuffer_unsafe() {
+void Blammo_createbuffer_unsafe() {
 	_logbuffer = malloc(_logMaxLines * sizeof(char**));
 	for(int i=0; i<_logMaxLines; i++) {
 		_logbuffer[i] = malloc(_logMaxLineLength+1);
@@ -76,25 +76,25 @@ void Logger_createbuffer_unsafe() {
 	}
 }
 
-void Logger_destroybuffer_unsafe() {
+void Blammo_destroybuffer_unsafe() {
 	for(int i=0; i<_logMaxLines; i++) {
 		free((void*)_logbuffer[i]);
 	}
 	free((void*)_logbuffer);
 }
 
-int Logger_init() {
+int Blammo_init() {
 	pthread_mutex_init(&_logMutex, NULL);
 	pthread_mutex_lock(&_logMutex);
-	_logStatus = LOG_STOPPED;
+	_logStatus = BLAMMO_STOPPED;
 	_logMaxLineLength = DEFAULT_MAXLINELENGTH;
 	_logMaxLines = DEFAULT_MAXLINES;
 	_logAutoflushSleep = DEFAULT_AUTOFLUSHSLEEP;
-	Logger_createbuffer_unsafe();
+	Blammo_createbuffer_unsafe();
 	_logCurrentLine = 0;
-	_logStatus = LOG_RUNNING;
+	_logStatus = BLAMMO_RUNNING;
 	pthread_mutex_unlock(&_logMutex);
-	pthread_create(&_logFlushThread, NULL, Logger_autoflush, NULL);
+	pthread_create(&_logFlushThread, NULL, Blammo_autoflush, NULL);
 	//pthread_setname_np(_logFlushThread, "LogFlusher");
 	return 0;
 }
@@ -103,7 +103,7 @@ int Logger_init() {
  * @brief Write pending buffered log entries and clear the buffer.
  * @details This function should only be used internally because it does not lock the mutex!
  */
-void Logger_process_unsafe() {
+void Blammo_process_unsafe() {
 	for(int i=0; i<_logCurrentLine; i++) {
 		printf("%s\n", _logbuffer[i]);
 		memset(_logbuffer[i], 0, _logMaxLineLength);
@@ -114,21 +114,21 @@ void Logger_process_unsafe() {
 	_logCurrentLine = 0;
 }
 
-void Logger_process() {
+void Blammo_process() {
 	pthread_mutex_lock(&_logMutex);
-	Logger_process_unsafe();
+	Blammo_process_unsafe();
 	pthread_mutex_unlock(&_logMutex);
 }
 
-void Logger_finish() {
+void Blammo_finish() {
 	pthread_mutex_lock(&_logMutex);
-	_logStatus = LOG_EXITING;
+	_logStatus = BLAMMO_EXITING;
 	pthread_mutex_unlock(&_logMutex);
 	void* status;
 	pthread_join(_logFlushThread, &status);
 	pthread_mutex_lock(&_logMutex);
-	Logger_process_unsafe();
-	Logger_destroybuffer_unsafe();
+	Blammo_process_unsafe();
+	Blammo_destroybuffer_unsafe();
 	pthread_mutex_unlock(&_logMutex);
 	pthread_mutex_destroy(&_logMutex);
 }
@@ -136,18 +136,18 @@ void Logger_finish() {
 /**
  * @brief Add entry to _logbuffer the dangerous way
  * @details Break str into _logMaxLineLength-sized chunks and add them to _logbuffer.  When necessary,
- * flush it with Logger_process_unsafe.  Internal use only!
+ * flush it with Blammo_process_unsafe.  Internal use only!
  * @param str (const char*) the C-string to add to the log buffer
  * @return int 0 = success, 1 = success and the buffer was emptied after the last line was added
  */
-int Logger_unsafe(const char* str) {
+int Blammo_unsafe(const char* str) {
 	int retval = 0;
 	assert(_logCurrentLine < _logMaxLines);  // if at any point this happens, something is very wrong
 	for(int i=0; i<strlen(str); i += _logMaxLineLength) {
 		strncpy(_logbuffer[_logCurrentLine], str+i, _logMaxLineLength);
 		_logCurrentLine++;
 		if(_logCurrentLine >= _logMaxLines) {
-			Logger_process_unsafe();
+			Blammo_process_unsafe();
 			retval = 1;
 		} else retval = 0;
 	}
@@ -155,83 +155,83 @@ int Logger_unsafe(const char* str) {
 }
 
 int Logger(const char* str) {
-	if(_logStatus != LOG_RUNNING) return -1;
+	if(_logStatus != BLAMMO_RUNNING) return -1;
 	pthread_mutex_lock(&_logMutex);
-	int retval = Logger_unsafe(str);
+	int retval = Blammo_unsafe(str);
 	pthread_mutex_unlock(&_logMutex);
 	return retval;
 }
 
 void Logger_now(const char* str) {
 	pthread_mutex_lock(&_logMutex);
-	int status = Logger_unsafe(str);
+	int status = Blammo_unsafe(str);
 	// if the log didn't flush, do it now:
-	if(status != 1) Logger_process_unsafe();
+	if(status != 1) Blammo_process_unsafe();
 	pthread_mutex_unlock(&_logMutex);
 }
 
-void Logger_pause() {
-	_logStatus = LOG_STOPPED;
+void Blammo_pause() {
+	_logStatus = BLAMMO_STOPPED;
 }
 
-void Logger_unpause() {
-	_logStatus = LOG_RUNNING;
+void Blammo_unpause() {
+	_logStatus = BLAMMO_RUNNING;
 }
 
-int Logger_status() {
+int Blammo_status() {
 	return _logStatus;
 }
 
-void Logger_setflushdelay(double ms) {
+void Blammo_setflushdelay(double ms) {
 	pthread_mutex_lock(&_logMutex);
 	if(ms > 0) _logAutoflushSleep = ms;
 	pthread_mutex_unlock(&_logMutex);
 }
 
-double Logger_getflushdelay() {
+double Blammo_getflushdelay() {
 	return _logAutoflushSleep;
 }
 
-void Logger_setmaxlines(int lines) {
+void Blammo_setmaxlines(int lines) {
 	if(lines <= 0 || lines == _logMaxLines) return;
 	pthread_mutex_lock(&_logMutex);
-	_logStatus = LOG_STOPPED;
+	_logStatus = BLAMMO_STOPPED;
 	//flush
-	Logger_process_unsafe();
+	Blammo_process_unsafe();
 	//destroy
-	Logger_destroybuffer_unsafe();
+	Blammo_destroybuffer_unsafe();
 #if defined DEBUGEXTRA
 	printf("_logMaxLines is %d and is about to be %d\n", _logMaxLines, lines);
 #endif //DEBUGEXTRA
 	_logMaxLines = lines;
 	//create
-	Logger_createbuffer_unsafe();
-	_logStatus = LOG_RUNNING;
+	Blammo_createbuffer_unsafe();
+	_logStatus = BLAMMO_RUNNING;
 	pthread_mutex_unlock(&_logMutex);
 }
 
-void Logger_setmaxlinelength(int length) {
+void Blammo_setmaxlinelength(int length) {
 	if(length <= 0 || length == _logMaxLineLength) return;
 	pthread_mutex_lock(&_logMutex);
-	_logStatus = LOG_STOPPED;
+	_logStatus = BLAMMO_STOPPED;
 	//flush
-	Logger_process_unsafe();
+	Blammo_process_unsafe();
 	//destroy
-	Logger_destroybuffer_unsafe();
+	Blammo_destroybuffer_unsafe();
 #if defined DEBUGEXTRA
 	printf("_logMaxLineLength is %d and is about to be %d\n", _logMaxLineLength, length);
 #endif //DEBUGEXTRA
 	_logMaxLineLength = length;
 	//create
-	Logger_createbuffer_unsafe();
-	_logStatus = LOG_RUNNING;
+	Blammo_createbuffer_unsafe();
+	_logStatus = BLAMMO_RUNNING;
 	pthread_mutex_unlock(&_logMutex);
 }
 
-int Logger_getmaxlines() {
+int Blammo_getmaxlines() {
 	return _logMaxLines;
 }
 
-int Logger_getmaxlinelength() {
+int Blammo_getmaxlinelength() {
 	return _logMaxLineLength;
 }

@@ -1,18 +1,18 @@
-/* StaticLogger.cpp
+/* AutoBlammo.cpp
  *
  */
 
 #include "AutoBlammo.h"
 #include "Blammo.h"
 
-static StaticLogger _staticlogger;
+static AutoBlammo _autoblammo;
 
-StaticLogger::StaticLogger() {
-	Logger_init();
-	Logger("StaticLogger initialized!");
+AutoBlammo::AutoBlammo() {
+	Blammo_init();
+	Logger("AutoBlammo initialized!");
 }
 
-StaticLogger::~StaticLogger() {
-	Logger("StaticLogger exiting.");
-	Logger_finish();
+AutoBlammo::~AutoBlammo() {
+	Logger("AutoBlammo exiting.");
+	Blammo_finish();
 }

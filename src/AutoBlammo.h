@@ -1,14 +1,19 @@
-/* StaticLogger.h
+/* AutoBlammo.h
  *
  */
+
+#if !defined AUTOBLAMMO_H
+#define AUTOBLAMMO_H
 
 #include "Blammo.h"
 
 /**
- * A statically-allocated class that automatically initializes and deinitializes Logger
+ * A statically-allocated class that automatically initializes and deinitializes Blammo
  */
-class StaticLogger {
+class AutoBlammo {
 public:
-	StaticLogger();
-	~StaticLogger();
+	AutoBlammo();
+	~AutoBlammo();
 };
+
+#endif //AUTOBLAMMO_H
