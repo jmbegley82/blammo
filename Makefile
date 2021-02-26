@@ -7,7 +7,7 @@ COMMONFLAGS ?= -g
 CFLAGS      ?= $(COMMONFLAGS) $(EXTRA_CFLAGS) -std=c99
 CXXFLAGS    ?= $(COMMONFLAGS) $(EXTRA_CFLAGS)
 CPPFLAGS    ?= -I./src/
-LDFLAGS     ?= -lpthread $(EXTRA_LIBS)
+LDFLAGS     ?= -lpthread -lagnostic $(EXTRA_LIBS)
 
 BUILD_DIR   ?=./build
 SRC_DIR     ?=./src
